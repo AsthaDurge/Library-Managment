@@ -1,0 +1,208 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header with Gradient */
+header {
+    background: linear-gradient(45deg, #3498db, #9b59b6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #e74c3c;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Section Styles */
+section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 900px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+form input:focus {
+    border: 2px solid #3498db;
+    background-color: #f4f4f9;
+}
+
+form button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #e030b4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Book Card */
+.book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.book-author {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.book-buttons {
+    margin-top: 10px;
+}
+
+.book-buttons button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.book-buttons button:hover {
+    background: #2980b9;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress {
+    height: 20px;
+    background: #2ecc71;
+    width: 75%; /* Change percentage dynamically */
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+body.dark-mode section {
+    background: #34495e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode button {
+    background: #e74c3c;
+}
+
+body.dark-mode h1 {
+    color: #ecf0f1;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    position: relative;
+    background: #ddd;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.toggle-switch:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+}
+
+.toggle-switch.active {
+    background: #3498db;
+}
+
+.toggle-switch.active:before {
+    left: 35px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form input, form button {
+        width: 100%;
+    }
+
+    .book-card {
+        font-size: 14px;
+    }
+}
